@@ -1,0 +1,282 @@
+$acc: #AF8165
+$acc2: #94684D
+$acc3: #B3967C
+$acc4: #F1D9C2
+$link: #FABC84
+$dark: #464646
+$dark2: #4A4A4A
+$dark3: #B6B6B0
+$light: #F8F8F7
+$mw: 1440px
+
+%flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+@mixin box-shadow($shadows...) 
+  -moz-box-shadow: $shadows
+  -webkit-box-shadow: $shadows
+  box-shadow: $shadows
+
+@import "default"
+
+section.offer
+	position: relative
+	width: 100%
+	height: 100vh
+	background: url(../img/bg1.jpg)
+	background-size: cover
+	.logo
+		text-align: center
+		img
+			margin: 55px 0
+			width: 300px
+	h1
+		font-size: 49px
+		line-height: 56px
+	h4
+		font-size: 19px
+		line-height: 27px
+		margin: 20px 0
+		font-weight: 400
+	.item
+		width: 50%
+		button
+			font-size: 17px
+			line-height: normal
+			display: inline-block
+			width: 247px
+			height: 63px
+			border-radius: 30px
+			background: #4A1AD6
+			background: -webkit-linear-gradient(bottom left, #4A1AD6, #448DF8)
+			background: -moz-linear-gradient(bottom left, #4A1AD6, #448DF8)
+			background: linear-gradient(bottom left, #4A1AD6, #448DF8)
+			@include box-shadow(-14px 26px 70px 1px rgba(58,71,232,0.2)) 
+			text-shadow: 0 2px rgba(0,0,0,0.22)
+			color: white
+			border: none
+	form
+		box-sizing: border-box
+		width: 75%
+		margin-left: 25%
+		background: #F1F1F1
+		border: 14px solid white
+		padding: 30px
+		text-align: center
+		h4
+			margin: 0 0 20px
+			text-align: center
+			font-weight: 700
+		input
+			box-sizing: border-box
+			border-radius: 13px
+			border: none
+			display: block
+			width: 100%
+			margin-bottom: 20px
+			padding: 10px
+			@include box-shadow(inset 0px 0px 7px 0px rgba(50, 50, 50, 0.3)) 
+
+
+
+
+section.case
+	.sb
+		align-items: center
+
+	.left
+		box-sizing: border-box
+		padding-left: 90px
+		width: 50%
+		min-width: 480px
+
+	.name
+		font-size: 14px
+		text-transform: uppercase
+
+	.desc
+		font-size: 18px
+
+	.note
+		font: 37px 'Futura PT Medium'
+		line-height: 1
+		margin: 27px 0 28px
+
+	.text-sb
+		@extend %flex
+		justify-content: space-between
+		align-items: center
+
+	ul
+		width: 300px
+
+	.list-case
+		width: 100%
+
+	li
+		position: relative
+		list-style: none
+		padding: 0 0 0 24px
+
+	li::before
+		content: ''
+		position: absolute
+		width: 15px
+		height: 13px
+		background: url(../img/case-list.png) 0 0 no-repeat
+		background-size: 100% 100%
+		top: 4px
+		left: 0
+
+	.video-case
+		@extend %flex
+		justify-content: flex-end
+		flex-grow: 1
+
+		img
+			padding-right: 10px
+			max-height: 50px
+
+	.right
+		position: relative
+		width: 50%
+
+		img
+			width: 100%
+			height: auto
+
+
+section.what-new
+	position: relative
+	.title
+		text-align: center
+		img.logo
+			margin: 55px 0 0
+			width: 300px
+		h1
+			position: relative
+		img.strips
+			z-index: -1
+			position: absolute
+			top: 100%
+			left: 50%
+			height: 200px
+			width: auto
+			transform: translate(-50%, -50%)
+	.sa
+		position: absolute
+		width: 100%
+		.item
+			@extend %flex
+			justify-content: center
+			align-items: center
+			box-sizing: border-box
+			padding: 30px
+			font-size: 25px
+			text-align: center
+			width: 290px
+			height: 220px
+			margin-top: 20px
+			background: url(../img/block1.jpg)
+			background-size: 100% 100%
+	.sb
+		align-items: center
+		.left
+			width: 58.33%
+		.right
+			width: 41.57%
+			img
+				width: 100%
+
+
+
+.prices
+	.item
+		align-self: flex-start
+		box-sizing: border-box
+		width: 24%
+		position: relative
+		border-radius: 8px
+		border: 1px solid #e4e4e4
+		background: #ffffff
+		padding: 42px 25px
+	.line
+		height: 2px
+		width: 100%
+		background: #dcdcdc
+		margin: 20px 0
+	.name
+		font-size: 35px
+		line-height: 35px
+		text-align: center
+	.price
+		color: #d4b026
+		font-size: 33px
+		font-weight: 700
+		text-align: center
+	li
+		position: relative
+		padding: 0 0 0 18px
+		list-style: none
+	li::before
+		content: ''
+		position: absolute
+		width: 10px
+		height: 10px
+		background: #d4b026
+		background-size: 100% 100%
+		border-radius: 50%
+		top: 7px
+		left: 0
+	button
+		@extend %flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 50px
+		margin-top: 15px
+		font-size: 20px
+		border-radius: 25px
+		border: none
+		background: #faca11
+
+
+.form
+	@extend %flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	min-height: 80vh
+
+	form
+		margin-top: 40px
+		text-align: center
+
+	input
+		display: block
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		border-radius: 36px
+		width: 370px
+		height: 71px
+		text-align: left
+		color: #000000
+		padding: 0 40px
+		margin: 0 auto 7px
+		border: 2px solid #3b3b3b
+		background: #ffffff
+		outline: none
+
+.form-submit
+	width: 364px
+	height: 90px
+	margin: 20px auto 0
+	padding-bottom: 25px
+	border: none
+	font: 25px 'Futura PT Medium'
+	background: url(../img/form-btn.png)
