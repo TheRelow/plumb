@@ -26,9 +26,8 @@ $mw: 1440px
 section.offer
 	position: relative
 	width: 100%
-	height: 100vh
-	background: url(../img/bg1.jpg)
-	background-size: cover
+	height: 100%
+	min-height: 100vh
 	.logo
 		text-align: center
 		img
@@ -67,6 +66,10 @@ section.offer
 		border: 14px solid white
 		padding: 30px
 		text-align: center
+		p
+			margin-top: 15px
+		a
+			color: black
 		h4
 			margin: 0 0 20px
 			text-align: center
@@ -79,9 +82,25 @@ section.offer
 			width: 100%
 			margin-bottom: 20px
 			padding: 10px
-			@include box-shadow(inset 0px 0px 7px 0px rgba(50, 50, 50, 0.3)) 
-
-
+			@include box-shadow(inset 0px 0px 7px 0px rgba(50, 50, 50, 0.3))
+@media (max-width: 950px)
+	section.offer
+		.sb
+			flex-direction: column
+		.item
+			width: 100% !important
+			text-align: center
+		form
+			margin: 50px auto
+@media (max-width: 505px)
+	section.offer
+		form
+			button
+				width: 100% !important
+@media (max-width: 505px)
+	section.offer
+		form
+			width: 90%
 
 
 section.case
@@ -127,7 +146,7 @@ section.case
 		position: absolute
 		width: 15px
 		height: 13px
-		background: url(../img/case-list.png) 0 0 no-repeat
+		background: url(https://raw.githubusercontent.com/TheRelow/plumb/master/img/case-list.png) 0 0 no-repeat
 		background-size: 100% 100%
 		top: 4px
 		left: 0
@@ -148,6 +167,49 @@ section.case
 		img
 			width: 100%
 			height: auto
+@media (max-width: 1020px)
+	section.case
+		.left
+			padding-left: 0
+			width: 80%
+			min-width: 200px
+		.right
+			width: 20%
+			img
+				width: 200%
+@media (max-width: 628px)
+	section.case
+		.right
+			img
+				z-index: -1
+				width: 250%
+				margin-left: -25px
+		.video-case
+			z-index: 1
+@media (max-width: 540px)
+	section.case
+		.sb
+			align-items: flex-end
+		.text-sb
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+		.video-case
+			margin: 15px 0 0 50px
+		.left
+			width: 70%
+		.right
+			width: 30%
+
+@media (max-width: 1020px)
+	.case2
+		.sb
+			flex-wrap: wrap
+		.left, .right, img
+			width: 100% !important
+
+
+
 
 
 section.what-new
@@ -181,7 +243,7 @@ section.what-new
 			width: 290px
 			height: 220px
 			margin-top: 20px
-			background: url(../img/block1.jpg)
+			background: url(https://raw.githubusercontent.com/TheRelow/plumb/master/img/block1.jpg)
 			background-size: 100% 100%
 	.sb
 		align-items: center
@@ -192,6 +254,22 @@ section.what-new
 			img
 				width: 100%
 
+@media (max-width: 850px)
+	section.what-new
+		.sb
+			flex-direction: column
+		.sa
+			flex-wrap: wrap
+			position: relative
+		.left
+			width: 100% !important
+		.right
+			display: none
+@media (max-width: 420px)
+	section.what-new
+		h1
+			font-size: 36px
+			line-height: 36px
 
 
 .prices
@@ -243,14 +321,37 @@ section.what-new
 		border-radius: 25px
 		border: none
 		background: #faca11
+@media (max-width: 945px)
+	.prices
+		.sb
+			flex-wrap: wrap
+		.item
+			width: 49%
+			margin-bottom: 15px
+@media (max-width: 470px)
+	.prices
+		.item
+			width: 100%
 
 
 .form
+	box-sizing: border-box
 	@extend %flex
 	flex-direction: column
 	justify-content: center
 	align-items: center
 	min-height: 80vh
+	padding: 20px
+
+	h1
+		text-align: center
+
+	p
+		width: 370px
+		text-align: center
+
+	a
+		color: black
 
 	form
 		margin-top: 40px
@@ -271,6 +372,15 @@ section.what-new
 		border: 2px solid #3b3b3b
 		background: #ffffff
 		outline: none
+@media (max-width: 500px)
+	.form
+		form
+			width: 100% !important
+		h1
+			font-size: 40px
+		input, p
+			width: 100% !important
+
 
 .form-submit
 	width: 364px
@@ -279,4 +389,38 @@ section.what-new
 	padding-bottom: 25px
 	border: none
 	font: 25px 'Futura PT Medium'
-	background: url(../img/form-btn.png)
+	background: url(https://raw.githubusercontent.com/TheRelow/plumb/master/img/form-btn.png)
+@media (max-width: 426px)
+	.form-submit
+		width: 100%
+		background-size: 100% 100%
+
+.swal-modal
+	width: 540px
+	height: 370px
+.swal-content
+	width: 500px
+	height: 250px
+	#vi
+		width: 500px
+		height: 250px
+@media (max-width: 700px)
+	.swal-modal
+		width: 340px
+		height: 270px
+	.swal-content
+		width: 300px
+		height: 150px
+		#vi
+			width: 300px
+			height: 150px
+@media (max-width: 400px)
+	.swal-modal
+		width: 320px
+		height: 270px
+	.swal-content
+		width: 280px
+		height: 140px
+		#vi
+			width: 280px
+			height: 140px

@@ -6,6 +6,7 @@
 html,body
 	position: relative
 	width: 100%
+	overflow-x: hidden
 
 h1
 	font-size: 48px
@@ -27,8 +28,6 @@ p
 	font-size: 18px
 
 a
-	color: white
-	text-decoration: none
 
 .upp
 	text-transform: uppercase
@@ -61,6 +60,10 @@ ol.prog
 section.wrapper
 	max-width: 1140px
 	margin: 0 auto
+@media (max-width: 1190px)
+	section.wrapper
+		width: 95%
+
 
 .sb
 	@extend %flex

@@ -12,7 +12,8 @@
 
 html, body {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
 
 h1 {
   font-size: 48px;
@@ -32,10 +33,6 @@ h4 {
 
 p {
   font-size: 18px; }
-
-a {
-  color: white;
-  text-decoration: none; }
 
 .upp {
   text-transform: uppercase; }
@@ -66,6 +63,10 @@ section.wrapper {
   max-width: 1140px;
   margin: 0 auto; }
 
+@media (max-width: 1190px) {
+  section.wrapper {
+    width: 95%; } }
+
 .sb {
   justify-content: space-between; }
 
@@ -78,9 +79,8 @@ section.wrapper {
 section.offer {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background: url(../img/bg1.jpg);
-  background-size: cover; }
+  height: 100%;
+  min-height: 100vh; }
   section.offer .logo {
     text-align: center; }
     section.offer .logo img {
@@ -121,6 +121,10 @@ section.offer {
     border: 14px solid white;
     padding: 30px;
     text-align: center; }
+    section.offer form p {
+      margin-top: 15px; }
+    section.offer form a {
+      color: black; }
     section.offer form h4 {
       margin: 0 0 20px;
       text-align: center;
@@ -136,6 +140,23 @@ section.offer {
       -moz-box-shadow: inset 0px 0px 7px 0px rgba(50, 50, 50, 0.3);
       -webkit-box-shadow: inset 0px 0px 7px 0px rgba(50, 50, 50, 0.3);
       box-shadow: inset 0px 0px 7px 0px rgba(50, 50, 50, 0.3); }
+
+@media (max-width: 950px) {
+  section.offer .sb {
+    flex-direction: column; }
+  section.offer .item {
+    width: 100% !important;
+    text-align: center; }
+  section.offer form {
+    margin: 50px auto; } }
+
+@media (max-width: 505px) {
+  section.offer form button {
+    width: 100% !important; } }
+
+@media (max-width: 505px) {
+  section.offer form {
+    width: 90%; } }
 
 section.case .sb {
   align-items: center; }
@@ -178,7 +199,7 @@ section.case li::before {
   position: absolute;
   width: 15px;
   height: 13px;
-  background: url(../img/case-list.png) 0 0 no-repeat;
+  background: url(https://raw.githubusercontent.com/TheRelow/plumb/master/img/case-list.png) 0 0 no-repeat;
   background-size: 100% 100%;
   top: 4px;
   left: 0; }
@@ -196,6 +217,44 @@ section.case .right {
   section.case .right img {
     width: 100%;
     height: auto; }
+
+@media (max-width: 1020px) {
+  section.case .left {
+    padding-left: 0;
+    width: 80%;
+    min-width: 200px; }
+  section.case .right {
+    width: 20%; }
+    section.case .right img {
+      width: 200%; } }
+
+@media (max-width: 628px) {
+  section.case .right img {
+    z-index: -1;
+    width: 250%;
+    margin-left: -25px; }
+  section.case .video-case {
+    z-index: 1; } }
+
+@media (max-width: 540px) {
+  section.case .sb {
+    align-items: flex-end; }
+  section.case .text-sb {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  section.case .video-case {
+    margin: 15px 0 0 50px; }
+  section.case .left {
+    width: 70%; }
+  section.case .right {
+    width: 30%; } }
+
+@media (max-width: 1020px) {
+  .case2 .sb {
+    flex-wrap: wrap; }
+  .case2 .left, .case2 .right, .case2 img {
+    width: 100% !important; } }
 
 section.what-new {
   position: relative; }
@@ -227,7 +286,7 @@ section.what-new {
       width: 290px;
       height: 220px;
       margin-top: 20px;
-      background: url(../img/block1.jpg);
+      background: url(https://raw.githubusercontent.com/TheRelow/plumb/master/img/block1.jpg);
       background-size: 100% 100%; }
   section.what-new .sb {
     align-items: center; }
@@ -237,6 +296,22 @@ section.what-new {
       width: 41.57%; }
       section.what-new .sb .right img {
         width: 100%; }
+
+@media (max-width: 850px) {
+  section.what-new .sb {
+    flex-direction: column; }
+  section.what-new .sa {
+    flex-wrap: wrap;
+    position: relative; }
+  section.what-new .left {
+    width: 100% !important; }
+  section.what-new .right {
+    display: none; } }
+
+@media (max-width: 420px) {
+  section.what-new h1 {
+    font-size: 36px;
+    line-height: 36px; } }
 
 .prices .item {
   align-self: flex-start;
@@ -292,11 +367,31 @@ section.what-new {
   border: none;
   background: #faca11; }
 
+@media (max-width: 945px) {
+  .prices .sb {
+    flex-wrap: wrap; }
+  .prices .item {
+    width: 49%;
+    margin-bottom: 15px; } }
+
+@media (max-width: 470px) {
+  .prices .item {
+    width: 100%; } }
+
 .form {
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; }
+  min-height: 80vh;
+  padding: 20px; }
+  .form h1 {
+    text-align: center; }
+  .form p {
+    width: 370px;
+    text-align: center; }
+  .form a {
+    color: black; }
   .form form {
     margin-top: 40px;
     text-align: center; }
@@ -316,6 +411,14 @@ section.what-new {
     background: #ffffff;
     outline: none; }
 
+@media (max-width: 500px) {
+  .form form {
+    width: 100% !important; }
+  .form h1 {
+    font-size: 40px; }
+  .form input, .form p {
+    width: 100% !important; } }
+
 .form-submit {
   width: 364px;
   height: 90px;
@@ -323,4 +426,42 @@ section.what-new {
   padding-bottom: 25px;
   border: none;
   font: 25px 'Futura PT Medium';
-  background: url(../img/form-btn.png); }
+  background: url(https://raw.githubusercontent.com/TheRelow/plumb/master/img/form-btn.png); }
+
+@media (max-width: 426px) {
+  .form-submit {
+    width: 100%;
+    background-size: 100% 100%; } }
+
+.swal-modal {
+  width: 540px;
+  height: 370px; }
+
+.swal-content {
+  width: 500px;
+  height: 250px; }
+  .swal-content #vi {
+    width: 500px;
+    height: 250px; }
+
+@media (max-width: 700px) {
+  .swal-modal {
+    width: 340px;
+    height: 270px; }
+  .swal-content {
+    width: 300px;
+    height: 150px; }
+    .swal-content #vi {
+      width: 300px;
+      height: 150px; } }
+
+@media (max-width: 400px) {
+  .swal-modal {
+    width: 320px;
+    height: 270px; }
+  .swal-content {
+    width: 280px;
+    height: 140px; }
+    .swal-content #vi {
+      width: 280px;
+      height: 140px; } }
